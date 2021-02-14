@@ -4,8 +4,8 @@
         "post0": {
             "title": "NLP in Action",
             "content": "import re # * match any number of consecutive characters r = &quot;(hi|hello|hey)[ ]*([a-z]*)&quot; . Example 1 . re_greeting.match(&quot;Good Morn&#39;n Rosa&quot;) . &lt;_sre.SRE_Match object; span=(0, 16), match=&#34;Good Morn&#39;n Rosa&#34;&gt; . re_greeting.match(&quot;yo Rosa&quot;) . &lt;_sre.SRE_Match object; span=(0, 7), match=&#39;yo Rosa&#39;&gt; . Example 2 . my_names = set([&#39;rosa&#39;, &#39;rose&#39;, &#39;chatty&#39;, &#39;chatbot&#39;, &#39;bot&#39;, &#39;chatterbot&#39;]) curt_names = set([&#39;hal&#39;, &#39;you&#39;, &#39;u&#39;]) greeter_name = &#39;&#39; . match = re_greeting.match(input()) . if match: at_name = match.groups()[-1] if at_name in curt_names: print(&quot;Good one.&quot;) elif at_name.lower() in my_names: print(&quot;Hi {}, How are you?&quot;.format(at_name)) . Good one. . at_name . &#39;i&#39; .",
-            "url": "https://ccalobeto.github.io/nlp2/2021/02/13/my-first-steps-in-nlp.html",
-            "relUrl": "/2021/02/13/my-first-steps-in-nlp.html",
+            "url": "https://ccalobeto.github.io/nlp2/fastpages/jupyter/2021/02/13/my-first-steps-in-nlp.html",
+            "relUrl": "/fastpages/jupyter/2021/02/13/my-first-steps-in-nlp.html",
             "date": " • Feb 13, 2021"
         }
         
