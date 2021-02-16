@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>NLP in Action | NLP Notes</title>
+<title>NLP in Action I | NLP Notes</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="NLP in Action" />
+<meta property="og:title" content="NLP in Action I" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="My journey to learn NLP" />
 <meta property="og:description" content="My journey to learn NLP" />
@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-13T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"https://ccalobeto.github.io/nlp2/fastpages/jupyter/2021/02/13/nlp-in-action-i.html","@type":"BlogPosting","headline":"NLP in Action","dateModified":"2021-02-13T00:00:00-06:00","datePublished":"2021-02-13T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ccalobeto.github.io/nlp2/fastpages/jupyter/2021/02/13/nlp-in-action-i.html"},"description":"My journey to learn NLP","@context":"https://schema.org"}</script>
+{"url":"https://ccalobeto.github.io/nlp2/fastpages/jupyter/2021/02/13/nlp-in-action-i.html","@type":"BlogPosting","headline":"NLP in Action I","dateModified":"2021-02-13T00:00:00-06:00","datePublished":"2021-02-13T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ccalobeto.github.io/nlp2/fastpages/jupyter/2021/02/13/nlp-in-action-i.html"},"description":"My journey to learn NLP","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/nlp2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ccalobeto.github.io/nlp2/feed.xml" title="NLP Notes" /><link rel="shortcut icon" type="image/x-icon" href="/nlp2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,13 +71,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">NLP in Action</h1><p class="page-description">My journey to learn NLP</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-02-13T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">NLP in Action I</h1><p class="page-description">My journey to learn NLP</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-02-13T00:00:00-06:00" itemprop="datePublished">
         Feb 13, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      28 min read
     
 </span></p>
 
@@ -103,7 +103,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Install-a-pip-package-in-the-current-Jupyter-kernel">Install a pip package in the current Jupyter kernel </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#NLP-Tools">NLP Tools </a>
+<li class="toc-entry toc-h2"><a href="#Text-Tools">Text Tools </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Regular-Expressions">Regular Expressions </a>
 <ul>
@@ -140,8 +140,38 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h4"><a href="#vader-model-for-sentiment-analysis">vader model for sentiment analysis </a></li>
 <li class="toc-entry toc-h4"><a href="#sentiment-score-for-a-given-corpus">sentiment score for a given corpus </a></li>
-<li class="toc-entry toc-h4"><a href="#can't-install-nlpia">can&#39;t install nlpia </a></li>
-<li class="toc-entry toc-h4"><a href="#A-complete-path-for-predicting-sentiment-analysis">A complete path for predicting sentiment analysis </a></li>
+<li class="toc-entry toc-h4"><a href="#naive-model-for-sentiment-analysis">naive model for sentiment analysis </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Math-with-words">Math with words </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Term-Frequency">Term Frequency </a></li>
+<li class="toc-entry toc-h3"><a href="#Bag-Of-Words">Bag Of Words </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Counting">Counting </a></li>
+<li class="toc-entry toc-h4"><a href="#Removing-stopwords">Removing stopwords </a></li>
+<li class="toc-entry toc-h4"><a href="#Vectorizing-the-text">Vectorizing the text </a></li>
+<li class="toc-entry toc-h4"><a href="#Lexicon">Lexicon </a></li>
+<li class="toc-entry toc-h4"><a href="#CosineSimilarity">CosineSimilarity </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#TF-IDF">TF-IDF </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#1st-approach-TF-IDF,-the-harder-version">1st approach TF-IDF, the harder version </a></li>
+<li class="toc-entry toc-h4"><a href="#2nd-approach-TF-IDF-with-similarities.">2nd approach TF-IDF with similarities. </a></li>
+<li class="toc-entry toc-h4"><a href="#3rd-Approach---The-best-version-with-sckit-learn.">3rd Approach - The best version with sckit learn. </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Finding-Meanings-in-Words">Finding Meanings in Words </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Spam-classifier">Spam classifier </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#get-the-data">get the data </a></li>
+<li class="toc-entry toc-h4"><a href="#TF-IDF-transformation">TF-IDF transformation </a></li>
 </ul>
 </li>
 </ul>
@@ -180,7 +210,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># !{sys.executable} -m pip install vaderSentiment</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="c1"># !{sys.executable} -m pip install vaderSentiment</span>
 </pre></div>
 
     </div>
@@ -193,8 +224,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="NLP-Tools">
-<a class="anchor" href="#NLP-Tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>NLP Tools<a class="anchor-link" href="#NLP-Tools"> </a>
+<h2 id="Text-Tools">
+<a class="anchor" href="#Text-Tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>Text Tools<a class="anchor-link" href="#Text-Tools"> </a>
 </h2>
 </div>
 </div>
@@ -1447,9 +1478,17 @@ dict sentiment for text2: {'neg': 0.0, 'neu': 0.737, 'pos': 0.263, 'compound': 0
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="can't-install-nlpia">
-<a class="anchor" href="#can't-install-nlpia" aria-hidden="true"><span class="octicon octicon-link"></span></a>can't install nlpia<a class="anchor-link" href="#can't-install-nlpia"> </a>
+<h4 id="naive-model-for-sentiment-analysis">
+<a class="anchor" href="#naive-model-for-sentiment-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>naive model for sentiment analysis<a class="anchor-link" href="#naive-model-for-sentiment-analysis"> </a>
 </h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>code to use movies data with nlpia but i can't install it</p>
+
 </div>
 </div>
 </div>
@@ -1463,19 +1502,6 @@ dict sentiment for text2: {'neg': 0.0, 'neu': 0.737, 'pos': 0.263, 'compound': 0
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#from nlpia.data.loaders import get_data</span>
 <span class="c1">#movies = get_data('hutto_movies')</span>
 <span class="c1">#movies.head().round(2)</span>
-<span class="c1">#     sentiment                                            text</span>
-<span class="c1"># id</span>
-<span class="c1"># 1        2.27  The Rock is destined to be the 21st Century...</span>
-<span class="c1"># 2        3.53  The gorgeously elaborate continuation of ''...</span>
-<span class="c1"># 3       -0.60                     Effective but too tepid ...</span>
-<span class="c1"># 4        1.47  If you sometimes like to go to the movies t...</span>
-<span class="c1"># 5        1.73  Emerges as something rare, an issue movie t...</span>
-<span class="c1">#movies.describe().round(2)</span>
-<span class="c1">#        sentiment</span>
-<span class="c1"># count   10605.00</span>
-<span class="c1"># mean        0.00</span>
-<span class="c1"># min        -3.88</span>
-<span class="c1"># max         3.94</span>
 </pre></div>
 
     </div>
@@ -1485,15 +1511,6 @@ dict sentiment for text2: {'neg': 0.0, 'neu': 0.737, 'pos': 0.263, 'compound': 0
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="A-complete-path-for-predicting-sentiment-analysis">
-<a class="anchor" href="#A-complete-path-for-predicting-sentiment-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>A complete path for predicting sentiment analysis<a class="anchor-link" href="#A-complete-path-for-predicting-sentiment-analysis"> </a>
-</h4>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1519,10 +1536,203 @@ dict sentiment for text2: {'neg': 0.0, 'neu': 0.737, 'pos': 0.263, 'compound': 0
 
 <span class="n">movies</span><span class="p">[</span><span class="s1">'sentiment'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">25000</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="c1"># sample the data</span>
-<span class="n">movies</span> <span class="o">=</span> <span class="n">movies</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+<span class="n">movies</span> <span class="o">=</span> <span class="n">movies</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">movies</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>review</th>
+      <th>sentiment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Woman (Miriam Hopkins as Virginia) chases Man ...</td>
+      <td>3.49</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>The combination of reading the Novella and vie...</td>
+      <td>-3.81</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>When my now college age daughter was in presch...</td>
+      <td>2.21</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Absolutely awful movie. Utter waste of time.&lt;b...</td>
+      <td>-0.94</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>I disagree with previous comment about this mo...</td>
+      <td>0.14</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>995</th>
+      <td>It's rare that I feel a need to write a review...</td>
+      <td>-0.86</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>Regardless of what personal opinion one may ha...</td>
+      <td>0.90</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>I have recently seen this movie due to Jake's ...</td>
+      <td>0.18</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>There is absolutely no plot in this movie ...n...</td>
+      <td>-2.02</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>After gorging myself on a variety of seemingly...</td>
+      <td>-1.87</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 2 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>sentiment goes from -4 to 4</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movies</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sentiment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>1000.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>-0.015730</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>2.362015</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-3.990000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>-2.055000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>-0.145000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2.180000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -1558,10 +1768,11 @@ dict sentiment for text2: {'neg': 0.0, 'neu': 0.737, 'pos': 0.263, 'compound': 0
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'bows shape:'</span><span class="p">,</span> <span class="n">df_bows</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'**************************************************'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'first review:'</span><span class="p">,</span> <span class="n">movies</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">review</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'first review:'</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">movies</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">review</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'**************************************************'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'tokens of the first review that appear in the first 5 rows of the dataset'</span><span class="p">,</span> 
-      <span class="n">df_bows</span><span class="o">.</span><span class="n">head</span><span class="p">()[</span><span class="nb">list</span><span class="p">(</span><span class="n">bags_of_words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'108 tokens of the first review, with a lexicon of 22298 tokens'</span><span class="p">)</span> 
+<span class="n">df_bows</span><span class="o">.</span><span class="n">head</span><span class="p">()[</span><span class="nb">list</span><span class="p">(</span><span class="n">bags_of_words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())]</span>
 </pre></div>
 
     </div>
@@ -1576,32 +1787,186 @@ dict sentiment for text2: {'neg': 0.0, 'neu': 0.737, 'pos': 0.263, 'compound': 0
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>bows shape: (1000, 22298)
 **************************************************
-first review: I'll give writer/director William Gove credit for finding someone to finance this ill-conceived "thriller." A good argument for not wasting money subscribing to HBO, let alone buying DVDs based on cover art and blurbs. A pedestrian Dennis Hopper and a game Richard Grieco add nothing significant to their resumes, although the art direction is not half bad. The dialogue will leave you grimacing with wonder at its conceit; this is storytelling at its worst. No tension, no suspense, no dread, no fear, no empathy, no catharsis, no nothing. A few attractive and often nude females spice up the boredom, but this is definitely a film best seen as a trailer. I feel sorry for the guy who greenlighted this thing. Good for late-night, zoned-out viewing only. You have been warned.
+first review:
+I'll give writer/director William Gove credit for finding someone to finance this ill-conceived "thriller." A good argument for not wasting money subscribing to HBO, let alone buying DVDs based on cover art and blurbs. A pedestrian Dennis Hopper and a game Richard Grieco add nothing significant to their resumes, although the art direction is not half bad. The dialogue will leave you grimacing with wonder at its conceit; this is storytelling at its worst. No tension, no suspense, no dread, no fear, no empathy, no catharsis, no nothing. A few attractive and often nude females spice up the boredom, but this is definitely a film best seen as a trailer. I feel sorry for the guy who greenlighted this thing. Good for late-night, zoned-out viewing only. You have been warned.
 **************************************************
-tokens of the first review that appear in the first 5 rows of the dataset    I'll  give  writer   /  director  William  Gove  credit  for  finding  \
-0     1     1       1   1         1        1     1       1    4        1   
-1     0     0       0  12         0        0     0       0    2        0   
-2     0     0       0   0         0        0     0       0    1        0   
-3     0     0       0   6         1        0     0       0    3        0   
-4     0     0       0   4         0        0     0       0    2        0   
-
-   ...  thing  Good  late-night  zoned-out  viewing  only  You  have  \
-0  ...      1     1           1          1        1     1    1     1   
-1  ...      0     0           0          0        0     0    0     2   
-2  ...      1     0           0          0        0     1    0     1   
-3  ...      0     0           0          0        0     0    0     0   
-4  ...      0     0           0          0        0     2    0     0   
-
-   been  warned  
-0     1       1  
-1     0       0  
-2     0       0  
-3     0       0  
-4     0       0  
-
-[5 rows x 108 columns]
+108 tokens of the first review, with a lexicon of 22298 tokens
 </pre>
 </div>
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>I'll</th>
+      <th>give</th>
+      <th>writer</th>
+      <th>/</th>
+      <th>director</th>
+      <th>William</th>
+      <th>Gove</th>
+      <th>credit</th>
+      <th>for</th>
+      <th>finding</th>
+      <th>...</th>
+      <th>thing</th>
+      <th>Good</th>
+      <th>late-night</th>
+      <th>zoned-out</th>
+      <th>viewing</th>
+      <th>only</th>
+      <th>You</th>
+      <th>have</th>
+      <th>been</th>
+      <th>warned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>...</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>12</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 108 columns</p>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -1631,7 +1996,8 @@ tokens of the first review that appear in the first 5 rows of the dataset    I'l
 <span class="c1"># fit the model and convert continuous to boolean label</span>
 <span class="n">nb</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_bows</span><span class="p">,</span> <span class="n">movies</span><span class="o">.</span><span class="n">sentiment</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
 
-<span class="c1"># values from review columns goes from -4 to 4 so this code normalize to the "ground true" sentiment</span>
+<span class="c1"># values from review columns goes from -4 to 4 so this code normalize to the "ground true" </span>
+<span class="c1"># sentiment. predict_proba return a n x 2 ndarray, we use el "1s" column</span>
 <span class="n">movies</span><span class="p">[</span><span class="s1">'predicted_sentiment'</span><span class="p">]</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">df_bows</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">-</span> <span class="mi">4</span>  
 <span class="n">movies</span><span class="p">[</span><span class="s1">'error'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">movies</span><span class="o">.</span><span class="n">predicted_sentiment</span> <span class="o">-</span> <span class="n">movies</span><span class="o">.</span><span class="n">sentiment</span><span class="p">)</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span>
 
@@ -1643,19 +2009,9 @@ tokens of the first review that appear in the first 5 rows of the dataset    I'l
 <span class="n">movies</span><span class="p">[</span><span class="s1">'predicted_ispositive'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">movies</span><span class="o">.</span><span class="n">predicted_sentiment</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 <span class="n">movies</span><span class="p">[</span><span class="s1">'''sentiment predicted_sentiment sentiment_ispositive predicted_ispositive'''</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 
-<span class="c1">#     sentiment  predicted_sentiment  sentiment_ispositive  predicted_ispositive</span>
-<span class="c1"># id</span>
-<span class="c1"># 1    2.266667                   4                    1                    1</span>
-<span class="c1"># 2    3.533333                   4                    1                    1</span>
-<span class="c1"># 3   -0.600000                  -4                    0                    0</span>
-<span class="c1"># 4    1.466667                   4                    1                    1</span>
-<span class="c1"># 5    1.733333                   4                    1                    1</span>
-<span class="c1"># 6    2.533333                   4                    1                    1</span>
-<span class="c1"># 7    2.466667                   4                    1                    1</span>
-<span class="c1"># 8    1.266667                  -4                    1                    0</span>
-
 <span class="c1"># prediction over positives</span>
-<span class="p">(</span><span class="n">movies</span><span class="o">.</span><span class="n">predicted_ispositive</span> <span class="o">==</span> <span class="n">movies</span><span class="o">.</span><span class="n">sentiment_ispositive</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'positives accuracy:'</span><span class="p">,</span> <span class="p">(</span><span class="n">movies</span><span class="o">.</span><span class="n">predicted_ispositive</span> <span class="o">==</span> 
+                             <span class="n">movies</span><span class="o">.</span><span class="n">sentiment_ispositive</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -1669,6 +2025,648 @@ tokens of the first review that appear in the first 5 rows of the dataset    I'l
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>MAE: 2.0512326689917173
+positives accuracy: 0.993
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Math-with-words">
+<a class="anchor" href="#Math-with-words" aria-hidden="true"><span class="octicon octicon-link"></span></a>Math with words<a class="anchor-link" href="#Math-with-words"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Term-Frequency">
+<a class="anchor" href="#Term-Frequency" aria-hidden="true"><span class="octicon octicon-link"></span></a>Term Frequency<a class="anchor-link" href="#Term-Frequency"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">TreebankWordTokenizer</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="n">sentence</span> <span class="o">=</span> <span class="s2">"""The faster Harry got to the store, the faster Harry, the faster, would get home."""</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">TreebankWordTokenizer</span><span class="p">()</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">bags_of_words</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+<span class="n">bags_of_words</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># top 4 bag of words</span>
+<span class="n">bags_of_words_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">([</span><span class="n">bags_of_words</span><span class="p">])</span>  <span class="c1"># put the tokens on columns, give the form of many sentences</span>
+<span class="n">tf</span> <span class="o">=</span> <span class="p">(</span><span class="n">bags_of_words_df</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">bags_of_words</span><span class="p">))</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">tf</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>the</th>
+      <th>faster</th>
+      <th>harry</th>
+      <th>got</th>
+      <th>to</th>
+      <th>store</th>
+      <th>,</th>
+      <th>would</th>
+      <th>get</th>
+      <th>home</th>
+      <th>.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.36</td>
+      <td>0.27</td>
+      <td>0.18</td>
+      <td>0.09</td>
+      <td>0.09</td>
+      <td>0.09</td>
+      <td>0.27</td>
+      <td>0.09</td>
+      <td>0.09</td>
+      <td>0.09</td>
+      <td>0.09</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Bag-Of-Words">
+<a class="anchor" href="#Bag-Of-Words" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bag Of Words<a class="anchor-link" href="#Bag-Of-Words"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Counting">
+<a class="anchor" href="#Counting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Counting<a class="anchor-link" href="#Counting"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">TreebankWordTokenizer</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">TreebankWordTokenizer</span><span class="p">()</span>
+
+<span class="c1"># van't install nlpia but from nlpia.data.loaders import kite_text</span>
+
+<span class="n">kite_text</span> <span class="o">=</span> <span class="s2">"""A kite is traditionally a tethered heavier-than-air craft with wing surfaces that react against the air </span>
+<span class="s2">to create lift and drag. A kite consists of wings, tethers, and anchors. Kites often have a bridle to guide the face of </span>
+<span class="s2">the kite at the correct angle so the wind can lift it. A kite’s wing also may be so designed so a bridle is not needed;</span>
+<span class="s2">when kiting a sailplane for launch, the tether meets the wing at a single point. A kite may have fixed or moving anchors. </span>
+<span class="s2">Untraditionally in technical kiting, a kite consists of tether-set-coupled wing sets; even in technical kiting, though, </span>
+<span class="s2">a wing in the system is still often called the kite.</span>
+<span class="s2">The lift that sustains the kite in flight is generated when air flows around the kite’s surface, producing low pressure </span>
+<span class="s2">above and high pressure below the wings. The interaction with the wind also generates horizontal drag along the direction </span>
+<span class="s2">of the wind. The resultant force vector from the lift and drag force components is opposed by the tension of one or more </span>
+<span class="s2">of the lines or tethers to which the kite is attached. The anchor point of the kite line may be static or moving (such </span>
+<span class="s2">as the towing of a kite by a running person, boat, free-falling anchors as in paragliders and fugitive parakites or </span>
+<span class="s2">vehicle).</span>
+<span class="s2">The same principles of fluid flow apply in liquids and kites are also used under water.</span>
+<span class="s2">A hybrid tethered craft comprising both a lighter-than-air balloon as well as a kite lifting surface is called a kytoon.</span>
+<span class="s2">Kites have a long and varied history and many different types are flown individually and at festivals worldwide. Kites </span>
+<span class="s2">may be flown for recreation, art or other practical uses. Sport kites can be flown in aerial ballet, sometimes as part </span>
+<span class="s2">of a competition. Power kites are multi-line steerable kites designed to generate large forces which can be used to </span>
+<span class="s2">power activities such as kite surfing, kite landboarding, kite fishing, kite buggying and a new trend snow kiting. </span>
+<span class="s2">Even Man-lifting kites have been made.</span>
+<span class="s2">"""</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">kite_text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">token_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">token_counts</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Counter({'a': 20,
+         'kite': 14,
+         'is': 7,
+         'traditionally': 1,
+         'tethered': 2,
+         'heavier-than-air': 1,
+         'craft': 2,
+         'with': 2,
+         'wing': 5,
+         'surfaces': 1,
+         'that': 2,
+         'react': 1,
+         'against': 1,
+         'the': 26,
+         'air': 2,
+         'to': 5,
+         'create': 1,
+         'lift': 4,
+         'and': 10,
+         'drag.': 1,
+         'consists': 2,
+         'of': 10,
+         'wings': 1,
+         ',': 14,
+         'tethers': 2,
+         'anchors.': 2,
+         'kites': 8,
+         'often': 2,
+         'have': 4,
+         'bridle': 2,
+         'guide': 1,
+         'face': 1,
+         'at': 3,
+         'correct': 1,
+         'angle': 1,
+         'so': 3,
+         'wind': 2,
+         'can': 3,
+         'it.': 1,
+         'kite’s': 2,
+         'also': 3,
+         'may': 4,
+         'be': 5,
+         'designed': 2,
+         'not': 1,
+         'needed': 1,
+         ';': 2,
+         'when': 2,
+         'kiting': 3,
+         'sailplane': 1,
+         'for': 2,
+         'launch': 1,
+         'tether': 1,
+         'meets': 1,
+         'single': 1,
+         'point.': 1,
+         'fixed': 1,
+         'or': 6,
+         'moving': 2,
+         'untraditionally': 1,
+         'in': 7,
+         'technical': 2,
+         'tether-set-coupled': 1,
+         'sets': 1,
+         'even': 2,
+         'though': 1,
+         'system': 1,
+         'still': 1,
+         'called': 2,
+         'kite.': 1,
+         'sustains': 1,
+         'flight': 1,
+         'generated': 1,
+         'flows': 1,
+         'around': 1,
+         'surface': 2,
+         'producing': 1,
+         'low': 1,
+         'pressure': 2,
+         'above': 1,
+         'high': 1,
+         'below': 1,
+         'wings.': 1,
+         'interaction': 1,
+         'generates': 1,
+         'horizontal': 1,
+         'drag': 2,
+         'along': 1,
+         'direction': 1,
+         'wind.': 1,
+         'resultant': 1,
+         'force': 2,
+         'vector': 1,
+         'from': 1,
+         'components': 1,
+         'opposed': 1,
+         'by': 2,
+         'tension': 1,
+         'one': 1,
+         'more': 1,
+         'lines': 1,
+         'which': 2,
+         'attached.': 1,
+         'anchor': 1,
+         'point': 1,
+         'line': 1,
+         'static': 1,
+         '(': 1,
+         'such': 2,
+         'as': 6,
+         'towing': 1,
+         'running': 1,
+         'person': 1,
+         'boat': 1,
+         'free-falling': 1,
+         'anchors': 1,
+         'paragliders': 1,
+         'fugitive': 1,
+         'parakites': 1,
+         'vehicle': 1,
+         ')': 1,
+         '.': 2,
+         'same': 1,
+         'principles': 1,
+         'fluid': 1,
+         'flow': 1,
+         'apply': 1,
+         'liquids': 1,
+         'are': 3,
+         'used': 2,
+         'under': 1,
+         'water.': 1,
+         'hybrid': 1,
+         'comprising': 1,
+         'both': 1,
+         'lighter-than-air': 1,
+         'balloon': 1,
+         'well': 1,
+         'lifting': 1,
+         'kytoon.': 1,
+         'long': 1,
+         'varied': 1,
+         'history': 1,
+         'many': 1,
+         'different': 1,
+         'types': 1,
+         'flown': 3,
+         'individually': 1,
+         'festivals': 1,
+         'worldwide.': 1,
+         'recreation': 1,
+         'art': 1,
+         'other': 1,
+         'practical': 1,
+         'uses.': 1,
+         'sport': 1,
+         'aerial': 1,
+         'ballet': 1,
+         'sometimes': 1,
+         'part': 1,
+         'competition.': 1,
+         'power': 2,
+         'multi-line': 1,
+         'steerable': 1,
+         'generate': 1,
+         'large': 1,
+         'forces': 1,
+         'activities': 1,
+         'surfing': 1,
+         'landboarding': 1,
+         'fishing': 1,
+         'buggying': 1,
+         'new': 1,
+         'trend': 1,
+         'snow': 1,
+         'kiting.': 1,
+         'man-lifting': 1,
+         'been': 1,
+         'made': 1})</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Removing-stopwords">
+<a class="anchor" href="#Removing-stopwords" aria-hidden="true"><span class="octicon octicon-link"></span></a>Removing stopwords<a class="anchor-link" href="#Removing-stopwords"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="c1"># nltk.download('stopwords', quiet=True)</span>
+<span class="n">stopwords</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">'english'</span><span class="p">)</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopwords</span><span class="p">]</span>
+<span class="n">kite_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kite_counts</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Counter({'kite': 14,
+         'traditionally': 1,
+         'tethered': 2,
+         'heavier-than-air': 1,
+         'craft': 2,
+         'wing': 5,
+         'surfaces': 1,
+         'react': 1,
+         'air': 2,
+         'create': 1,
+         'lift': 4,
+         'drag.': 1,
+         'consists': 2,
+         'wings': 1,
+         ',': 14,
+         'tethers': 2,
+         'anchors.': 2,
+         'kites': 8,
+         'often': 2,
+         'bridle': 2,
+         'guide': 1,
+         'face': 1,
+         'correct': 1,
+         'angle': 1,
+         'wind': 2,
+         'it.': 1,
+         'kite’s': 2,
+         'also': 3,
+         'may': 4,
+         'designed': 2,
+         'needed': 1,
+         ';': 2,
+         'kiting': 3,
+         'sailplane': 1,
+         'launch': 1,
+         'tether': 1,
+         'meets': 1,
+         'single': 1,
+         'point.': 1,
+         'fixed': 1,
+         'moving': 2,
+         'untraditionally': 1,
+         'technical': 2,
+         'tether-set-coupled': 1,
+         'sets': 1,
+         'even': 2,
+         'though': 1,
+         'system': 1,
+         'still': 1,
+         'called': 2,
+         'kite.': 1,
+         'sustains': 1,
+         'flight': 1,
+         'generated': 1,
+         'flows': 1,
+         'around': 1,
+         'surface': 2,
+         'producing': 1,
+         'low': 1,
+         'pressure': 2,
+         'high': 1,
+         'wings.': 1,
+         'interaction': 1,
+         'generates': 1,
+         'horizontal': 1,
+         'drag': 2,
+         'along': 1,
+         'direction': 1,
+         'wind.': 1,
+         'resultant': 1,
+         'force': 2,
+         'vector': 1,
+         'components': 1,
+         'opposed': 1,
+         'tension': 1,
+         'one': 1,
+         'lines': 1,
+         'attached.': 1,
+         'anchor': 1,
+         'point': 1,
+         'line': 1,
+         'static': 1,
+         '(': 1,
+         'towing': 1,
+         'running': 1,
+         'person': 1,
+         'boat': 1,
+         'free-falling': 1,
+         'anchors': 1,
+         'paragliders': 1,
+         'fugitive': 1,
+         'parakites': 1,
+         'vehicle': 1,
+         ')': 1,
+         '.': 2,
+         'principles': 1,
+         'fluid': 1,
+         'flow': 1,
+         'apply': 1,
+         'liquids': 1,
+         'used': 2,
+         'water.': 1,
+         'hybrid': 1,
+         'comprising': 1,
+         'lighter-than-air': 1,
+         'balloon': 1,
+         'well': 1,
+         'lifting': 1,
+         'kytoon.': 1,
+         'long': 1,
+         'varied': 1,
+         'history': 1,
+         'many': 1,
+         'different': 1,
+         'types': 1,
+         'flown': 3,
+         'individually': 1,
+         'festivals': 1,
+         'worldwide.': 1,
+         'recreation': 1,
+         'art': 1,
+         'practical': 1,
+         'uses.': 1,
+         'sport': 1,
+         'aerial': 1,
+         'ballet': 1,
+         'sometimes': 1,
+         'part': 1,
+         'competition.': 1,
+         'power': 2,
+         'multi-line': 1,
+         'steerable': 1,
+         'generate': 1,
+         'large': 1,
+         'forces': 1,
+         'activities': 1,
+         'surfing': 1,
+         'landboarding': 1,
+         'fishing': 1,
+         'buggying': 1,
+         'new': 1,
+         'trend': 1,
+         'snow': 1,
+         'kiting.': 1,
+         'man-lifting': 1,
+         'made': 1})</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Vectorizing-the-text">
+<a class="anchor" href="#Vectorizing-the-text" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vectorizing the text<a class="anchor-link" href="#Vectorizing-the-text"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">document_vector</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">doc_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kite_counts</span><span class="o">.</span><span class="n">most_common</span><span class="p">():</span>
+    <span class="n">document_vector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span> <span class="o">/</span> <span class="n">doc_length</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Printing the first 10 values of the list'</span><span class="p">)</span>
+<span class="n">document_vector</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Printing the first 10 values of the list
 </pre>
 </div>
 </div>
@@ -1678,7 +2676,528 @@ tokens of the first review that appear in the first 5 rows of the dataset    I'l
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.993</pre>
+<pre>[1.75, 1.75, 1.0, 0.625, 0.5, 0.5, 0.375, 0.375, 0.375, 0.25]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Lexicon">
+<a class="anchor" href="#Lexicon" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lexicon<a class="anchor-link" href="#Lexicon"> </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lexicon with a new corpus</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">docs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"The faster Harry got to the score, the faster and faster Harry would get home."</span><span class="p">]</span>
+<span class="n">docs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"Harry is hairy and faster than Jill."</span><span class="p">)</span>
+<span class="n">docs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"Jill is not as hairy as Harry."</span><span class="p">)</span>
+
+<span class="n">doc_tokens</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">:</span>
+    <span class="n">doc_tokens</span> <span class="o">+=</span> <span class="p">[</span><span class="nb">sorted</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">lower</span><span class="p">()))]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'number of tokens of the first term in the list:'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">doc_tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="n">all_doc_tokens</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">doc_tokens</span><span class="p">,</span> <span class="p">[])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'number of total tokens:'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_doc_tokens</span><span class="p">))</span>
+
+<span class="n">lexicon</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">all_doc_tokens</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'**************************************************'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'size of the lexicon:'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lexicon</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'lexicon:'</span><span class="p">,</span> <span class="n">lexicon</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>number of tokens of the first term in the list: 17
+number of total tokens: 33
+**************************************************
+size of the lexicon: 18
+lexicon: [',', '.', 'and', 'as', 'faster', 'get', 'got', 'hairy', 'harry', 'home', 'is', 'jill', 'not', 'score', 'than', 'the', 'to', 'would']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>vectorize the sentences in a list of OrderedDict</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<span class="n">zero_vector</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">((</span><span class="n">token</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">lexicon</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="n">doc_vectors</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">:</span>
+    <span class="n">vec</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">zero_vector</span><span class="p">)</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">token_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">token_counts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">vec</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lexicon</span><span class="p">)</span>
+    <span class="n">doc_vectors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Printint the First OrderedDict that corresponds to the first sentence:'</span><span class="p">)</span>
+<span class="n">doc_vectors</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Printint the First OrderedDict that corresponds to the first sentence:
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OrderedDict([(',', 0),
+             ('.', 0.05555555555555555),
+             ('and', 0),
+             ('as', 0.1111111111111111),
+             ('faster', 0),
+             ('get', 0),
+             ('got', 0),
+             ('hairy', 0.05555555555555555),
+             ('harry', 0.05555555555555555),
+             ('home', 0),
+             ('is', 0.05555555555555555),
+             ('jill', 0.05555555555555555),
+             ('not', 0.05555555555555555),
+             ('score', 0),
+             ('than', 0),
+             ('the', 0),
+             ('to', 0),
+             ('would', 0)])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="CosineSimilarity">
+<a class="anchor" href="#CosineSimilarity" aria-hidden="true"><span class="octicon octicon-link"></span></a>CosineSimilarity<a class="anchor-link" href="#CosineSimilarity"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="k">def</span> <span class="nf">cosine_sim</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span><span class="p">):</span>
+    <span class="sd">""" Let's convert our dictionaries to lists for easier matching."""</span>
+    <span class="n">vec1</span> <span class="o">=</span> <span class="p">[</span><span class="n">val</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">vec1</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+    <span class="n">vec2</span> <span class="o">=</span> <span class="p">[</span><span class="n">val</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">vec2</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+
+    <span class="n">dot_prod</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vec1</span><span class="p">):</span>
+        <span class="n">dot_prod</span> <span class="o">+=</span> <span class="n">v</span> <span class="o">*</span> <span class="n">vec2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="n">mag_1</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vec1</span><span class="p">]))</span>
+    <span class="n">mag_2</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vec2</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">dot_prod</span> <span class="o">/</span> <span class="p">(</span><span class="n">mag_1</span> <span class="o">*</span> <span class="n">mag_2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="TF-IDF">
+<a class="anchor" href="#TF-IDF" aria-hidden="true"><span class="octicon octicon-link"></span></a>TF-IDF<a class="anchor-link" href="#TF-IDF"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="1st-approach-TF-IDF,-the-harder-version">
+<a class="anchor" href="#1st-approach-TF-IDF,-the-harder-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>1st approach TF-IDF, the harder version<a class="anchor-link" href="#1st-approach-TF-IDF,-the-harder-version"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kite_history</span> <span class="o">=</span> <span class="s2">"""Kites were invented in China, where materials ideal for kite building were readily </span>
+<span class="s2">available: silk fabric for sail material; fine, high-tensile-strength silk for flying line; and resilient</span>
+<span class="s2">bamboo for a strong, lightweight framework.</span>
+<span class="s2">The kite has been claimed as the invention of the 5th-century BC Chinese philosophers Mozi (also Mo Di) </span>
+<span class="s2">and Lu Ban (also Gongshu Ban). By 549 AD paper kites were certainly being flown, as it was recorded that </span>
+<span class="s2">in that year a paper kite was used as a message for a rescue mission. Ancient and medieval Chinese sources</span>
+<span class="s2">describe kites being used for measuring distances, testing the wind, lifting men, signaling, and </span>
+<span class="s2">communication for military operations. The earliest known Chinese kites were flat (not bowed) and </span>
+<span class="s2">often rectangular. Later, tailless kites incorporated a stabilizing bowline. Kites were decorated with </span>
+<span class="s2">mythological motifs and legendary figures; some were fitted with strings and whistles to make musical </span>
+<span class="s2">sounds while flying. From China, kites were introduced to Cambodia, Thailand, India, Japan, Korea and </span>
+<span class="s2">the western world.</span>
+<span class="s2">After its introduction into India, the kite further evolved into the fighter kite, known as the patang </span>
+<span class="s2">in India, where thousands are flown every year on festivals such as Makar Sankranti.</span>
+<span class="s2">Kites were known throughout Polynesia, as far as New Zealand, with the assumption being that the </span>
+<span class="s2">knowledge diffused from China along with the people. Anthropomorphic kites made from cloth and wood </span>
+<span class="s2">were used in religious ceremonies to send prayers to the gods. Polynesian kite traditions are used by </span>
+<span class="s2">anthropologists get an idea of early “primitive” Asian traditions that are believed to have at one time </span>
+<span class="s2">existed in Asia."""</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>detect a list of tokens from texts</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">intro_tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">kite_text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">history_tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">kite_history</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">intro_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">intro_tokens</span><span class="p">)</span>
+<span class="n">history_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">history_tokens</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'tokens in kite text:'</span><span class="p">,</span> <span class="n">intro_total</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'tokens in kite history:'</span><span class="p">,</span> <span class="n">history_total</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"This section is to show what zipf's law is"</span><span class="p">)</span>
+<span class="c1"># compute the TF of one word in two documents</span>
+<span class="n">intro_tf</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">history_tf</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">intro_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">intro_tokens</span><span class="p">)</span>
+<span class="n">intro_tf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span> <span class="o">=</span> <span class="n">intro_counts</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span> <span class="o">/</span> <span class="n">intro_total</span>
+<span class="n">history_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">history_tokens</span><span class="p">)</span>
+<span class="n">history_tf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span> <span class="o">=</span> <span class="n">history_counts</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span> <span class="o">/</span> <span class="n">history_total</span>
+
+<span class="c1"># the tf of word "kite" in document A is twice times the tf of word kite in document B </span>
+<span class="c1"># (according to zipf's law)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Term Frequency of word "kite" in intro document is: </span><span class="si">{:.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">intro_tf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Term Frequency of word "kite" in history document is: </span><span class="si">{:.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">history_tf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]))</span>
+
+<span class="c1"># But zipf's law is not fulfilled with word "and"</span>
+<span class="n">intro_tf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span> <span class="o">=</span> <span class="n">intro_counts</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span> <span class="o">/</span> <span class="n">intro_total</span>
+<span class="n">history_tf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span> <span class="o">=</span> <span class="n">history_counts</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span> <span class="o">/</span> <span class="n">history_total</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Term Frequency of word "and" in intro document is: </span><span class="si">{:.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">intro_tf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Term Frequency of word "and" in history document is: </span><span class="si">{:.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">history_tf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>tokens in kite text: 361
+tokens in kite history: 295
+
+This section is to show what zipf's law is
+Term Frequency of word "kite" in intro document is: 0.0388
+Term Frequency of word "kite" in history document is: 0.0203
+Term Frequency of word "and" in intro document is: 0.0277
+Term Frequency of word "and" in history document is: 0.0305
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>calculating the TF-IDF of only 3 words: "and", "kite" and "china"</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_docs_containing_and</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="p">[</span><span class="n">intro_tokens</span><span class="p">,</span> <span class="n">history_tokens</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="s1">'and'</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+        <span class="n">num_docs_containing_and</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">num_docs_containing_kite</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="p">[</span><span class="n">intro_tokens</span><span class="p">,</span> <span class="n">history_tokens</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="s1">'and'</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+        <span class="n">num_docs_containing_kite</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">num_docs_containing_china</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="p">[</span><span class="n">intro_tokens</span><span class="p">,</span> <span class="n">history_tokens</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="s1">'and'</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+        <span class="n">num_docs_containing_china</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">intro_tf</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span> <span class="o">=</span> <span class="n">intro_counts</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span> <span class="o">/</span> <span class="n">intro_total</span>
+<span class="n">history_tf</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span> <span class="o">=</span> <span class="n">history_counts</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span> <span class="o">/</span> <span class="n">history_total</span>
+<span class="n">num_docs</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">intro_idf</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">history_idf</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">intro_idf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_docs</span> <span class="o">/</span> <span class="n">num_docs_containing_and</span>
+<span class="n">history_idf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_docs</span> <span class="o">/</span> <span class="n">num_docs_containing_and</span>
+<span class="n">intro_idf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_docs</span> <span class="o">/</span> <span class="n">num_docs_containing_kite</span>
+<span class="n">history_idf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_docs</span> <span class="o">/</span> <span class="n">num_docs_containing_kite</span>
+<span class="n">intro_idf</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_docs</span> <span class="o">/</span> <span class="n">num_docs_containing_china</span>
+<span class="n">history_idf</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_docs</span> <span class="o">/</span> <span class="n">num_docs_containing_china</span>
+
+<span class="n">intro_tfidf</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">intro_tfidf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span> <span class="o">=</span> <span class="n">intro_tf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span> <span class="o">*</span> <span class="n">intro_idf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span>
+<span class="n">intro_tfidf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span> <span class="o">=</span> <span class="n">intro_tf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span> <span class="o">*</span> <span class="n">intro_idf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span>
+<span class="n">intro_tfidf</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span> <span class="o">=</span> <span class="n">intro_tf</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span> <span class="o">*</span> <span class="n">intro_idf</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span>
+<span class="n">history_tfidf</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">history_tfidf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span> <span class="o">=</span> <span class="n">history_tf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span> <span class="o">*</span> <span class="n">history_idf</span><span class="p">[</span><span class="s1">'and'</span><span class="p">]</span>
+<span class="n">history_tfidf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span> <span class="o">=</span> <span class="n">history_tf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span> <span class="o">*</span> <span class="n">history_idf</span><span class="p">[</span><span class="s1">'kite'</span><span class="p">]</span>
+<span class="n">history_tfidf</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span> <span class="o">=</span> <span class="n">history_tf</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span> <span class="o">*</span> <span class="n">history_idf</span><span class="p">[</span><span class="s1">'china'</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'TF-IDF of the words in document intro is: '</span><span class="p">,</span> <span class="n">intro_tfidf</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'TF-IDF of the words in documenty history is '</span><span class="p">,</span><span class="n">history_tfidf</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>TF-IDF of the words in document intro is:  {'and': 0.027700831024930747, 'kite': 0.038781163434903045, 'china': 0.0}
+TF-IDF of the words in documenty history is  {'and': 0.030508474576271188, 'kite': 0.020338983050847456, 'china': 0.010169491525423728}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2nd-approach-TF-IDF-with-similarities.">
+<a class="anchor" href="#2nd-approach-TF-IDF-with-similarities." aria-hidden="true"><span class="octicon octicon-link"></span></a>2nd approach TF-IDF with similarities.<a class="anchor-link" href="#2nd-approach-TF-IDF-with-similarities."> </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>converting a list of text into a list of tuples containing the token and its count</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">copy</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'corpus:'</span><span class="p">,</span> <span class="n">docs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+<span class="n">document_tfidf_vectors</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">:</span>
+    <span class="n">vec</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">zero_vector</span><span class="p">)</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">token_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">token_counts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">docs_containing_key</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">_doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">_doc</span><span class="p">:</span>
+                <span class="n">docs_containing_key</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">tf</span> <span class="o">=</span> <span class="n">value</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lexicon</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">docs_containing_key</span><span class="p">:</span>
+            <span class="n">idf</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span> <span class="o">/</span> <span class="n">docs_containing_key</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">idf</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">vec</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">tf</span> <span class="o">*</span> <span class="n">idf</span>
+    <span class="n">document_tfidf_vectors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
+<span class="n">document_tfidf_vectors</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>corpus: ['The faster Harry got to the score, the faster and faster Harry would get home.', 'Harry is hairy and faster than Jill.', 'Jill is not as hairy as Harry.']
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[OrderedDict([(',', 0.16666666666666666),
+              ('.', 0.05555555555555555),
+              ('and', 0.08333333333333333),
+              ('as', 0),
+              ('faster', 0.25),
+              ('get', 0.16666666666666666),
+              ('got', 0.16666666666666666),
+              ('hairy', 0),
+              ('harry', 0.0),
+              ('home', 0.16666666666666666),
+              ('is', 0),
+              ('jill', 0),
+              ('not', 0),
+              ('score', 0.16666666666666666),
+              ('than', 0),
+              ('the', 0.5),
+              ('to', 0.16666666666666666),
+              ('would', 0.16666666666666666)]),
+ OrderedDict([(',', 0),
+              ('.', 0.05555555555555555),
+              ('and', 0.08333333333333333),
+              ('as', 0),
+              ('faster', 0.08333333333333333),
+              ('get', 0),
+              ('got', 0),
+              ('hairy', 0.08333333333333333),
+              ('harry', 0.0),
+              ('home', 0),
+              ('is', 0.08333333333333333),
+              ('jill', 0.0),
+              ('not', 0),
+              ('score', 0),
+              ('than', 0.16666666666666666),
+              ('the', 0),
+              ('to', 0),
+              ('would', 0)]),
+ OrderedDict([(',', 0),
+              ('.', 0.05555555555555555),
+              ('and', 0),
+              ('as', 0.1111111111111111),
+              ('faster', 0),
+              ('get', 0),
+              ('got', 0),
+              ('hairy', 0.08333333333333333),
+              ('harry', 0.0),
+              ('home', 0),
+              ('is', 0.08333333333333333),
+              ('jill', 0.0),
+              ('not', 0.16666666666666666),
+              ('score', 0),
+              ('than', 0),
+              ('the', 0),
+              ('to', 0),
+              ('would', 0)])]</pre>
 </div>
 
 </div>
@@ -1696,16 +3215,301 @@ tokens of the first review that appear in the first 5 rows of the dataset    I'l
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nb</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"How long does it take to get to the store?"</span>
+<span class="n">query_vec</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">zero_vector</span><span class="p">)</span>
+
+<span class="c1"># normalize the query</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">query</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="c1"># a dic with tokens with counts</span>
+<span class="n">token_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+
+<span class="n">documents</span> <span class="o">=</span> <span class="n">docs</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">token_counts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">docs_containing_key</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">_doc</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">_doc</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+            <span class="n">docs_containing_key</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1"># Avoiding divide-by-zero-error</span>
+    <span class="k">if</span> <span class="n">docs_containing_key</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">tf</span> <span class="o">=</span> <span class="n">value</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+    <span class="n">idf</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">documents</span><span class="p">)</span> <span class="o">/</span> <span class="n">docs_containing_key</span>
+    <span class="n">query_vec</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">tf</span> <span class="o">*</span> <span class="n">idf</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'TF-IDF of query(list version):'</span><span class="p">,</span><span class="n">query_vec</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>TF-IDF of query(list version): OrderedDict([(',', 0), ('.', 0), ('and', 0), ('as', 0), ('faster', 0), ('get', 0.2727272727272727), ('got', 0), ('hairy', 0), ('harry', 0), ('home', 0), ('is', 0), ('jill', 0), ('not', 0), ('score', 0), ('than', 0), ('the', 0.2727272727272727), ('to', 0.5454545454545454), ('would', 0)])
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>computing similarities between documents</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'similarities between query and 1st, 2nd and 3rd document:'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cosine_sim</span><span class="p">(</span><span class="n">query_vec</span><span class="p">,</span> <span class="n">document_tfidf_vectors</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cosine_sim</span><span class="p">(</span><span class="n">query_vec</span><span class="p">,</span> <span class="n">document_tfidf_vectors</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cosine_sim</span><span class="p">(</span><span class="n">query_vec</span><span class="p">,</span> <span class="n">document_tfidf_vectors</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>similarities between query and 1st, 2nd and 3rd document:
+0.5677922680888605
+0.0
+0.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="3rd-Approach---The-best-version-with-sckit-learn.">
+<a class="anchor" href="#3rd-Approach---The-best-version-with-sckit-learn." aria-hidden="true"><span class="octicon octicon-link"></span></a>3rd Approach - The best version with sckit learn.<a class="anchor-link" href="#3rd-Approach---The-best-version-with-sckit-learn."> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="n">corpus</span> <span class="o">=</span> <span class="n">docs</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">min_df</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">corpus</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'corpus ndarray output:'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'message: need to include the similarities(like 2nd approach)between'</span>
+      <span class="o">+</span><span class="s1">'TF-IDF vectors: query and corpus!'</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">todense</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>corpus ndarray output:
+message: need to include the similarities (like 2nd approach)betweenTF-IDF vectors: query and corpus!
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[0.16, 0.  , 0.48, 0.21, 0.21, 0.  , 0.25, 0.21, 0.  , 0.  , 0.  ,
+        0.21, 0.  , 0.64, 0.21, 0.21],
+       [0.37, 0.  , 0.37, 0.  , 0.  , 0.37, 0.29, 0.  , 0.37, 0.37, 0.  ,
+        0.  , 0.49, 0.  , 0.  , 0.  ],
+       [0.  , 0.75, 0.  , 0.  , 0.  , 0.29, 0.22, 0.  , 0.29, 0.29, 0.38,
+        0.  , 0.  , 0.  , 0.  , 0.  ]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Finding-Meanings-in-Words">
+<a class="anchor" href="#Finding-Meanings-in-Words" aria-hidden="true"><span class="octicon octicon-link"></span></a>Finding Meanings in Words<a class="anchor-link" href="#Finding-Meanings-in-Words"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Spam-classifier">
+<a class="anchor" href="#Spam-classifier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spam classifier<a class="anchor-link" href="#Spam-classifier"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="get-the-data">
+<a class="anchor" href="#get-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>get the data<a class="anchor-link" href="#get-the-data"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">nlpia.data.loaders</span> <span class="kn">import</span> <span class="n">get_data</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="n">sms</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="s1">'sms-spam'</span><span class="p">)</span>
+
+<span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'sms</span><span class="si">{}{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">'!'</span><span class="o">*</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sms</span><span class="p">)),</span> <span class="n">sms</span><span class="o">.</span><span class="n">spam</span><span class="p">)]</span>
+<span class="n">sms</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sms</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">sms</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span>
+<span class="n">sms</span><span class="p">[</span><span class="s1">'spam'</span><span class="p">]</span> <span class="o">=</span> <span class="n">sms</span><span class="o">.</span><span class="n">spam</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'number of spam messages'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sms</span><span class="p">))</span>
+<span class="n">sms</span><span class="o">.</span><span class="n">spam</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">sms</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>number of spam mails 4837
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>spam</th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>sms0</th>
+      <td>0</td>
+      <td>Go until jurong point, crazy.. Available only ...</td>
+    </tr>
+    <tr>
+      <th>sms1</th>
+      <td>0</td>
+      <td>Ok lar... Joking wif u oni...</td>
+    </tr>
+    <tr>
+      <th>sms2!</th>
+      <td>1</td>
+      <td>Free entry in 2 a wkly comp to win FA Cup fina...</td>
+    </tr>
+    <tr>
+      <th>sms3</th>
+      <td>0</td>
+      <td>U dun say so early hor... U c already then say...</td>
+    </tr>
+    <tr>
+      <th>sms4</th>
+      <td>0</td>
+      <td>Nah I don't think he goes to usf, he lives aro...</td>
+    </tr>
+    <tr>
+      <th>sms5!</th>
+      <td>1</td>
+      <td>FreeMsg Hey there darling it's been 3 week's n...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="TF-IDF-transformation">
+<a class="anchor" href="#TF-IDF-transformation" aria-hidden="true"><span class="octicon octicon-link"></span></a>TF-IDF transformation<a class="anchor-link" href="#TF-IDF-transformation"> </a>
+</h4>
+</div>
+</div>
+</div>
 </div>
 
 
